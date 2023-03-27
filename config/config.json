@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "root",
+    "password": "mysql-container",
+    "database": "argon_attendance",
+    "host": "192.168.1.5",
+    "dialect": "mysql",
+    "port": "3336"
+  },
+  "test": {
+    "username": "root",
+    "password": "mysql-container",
+    "database": "argon_attendance",
+    "host": "192.168.1.5",
+    "dialect": "mysql",
+    "port": "3336"
+  },
+  "production": {
+    "username": "root",
+    "password": "mysql-container",
+    "database": "argon_attendance",
+    "host": "192.168.1.5",
+    "dialect": "mysql",
+    "port": "3336"
+  }
+}
