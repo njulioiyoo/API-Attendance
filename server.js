@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 // enable CORS
 app.use(
   cors({
-    origin: "*",
+    origin: "http://localhost:9001",
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
   })
 );

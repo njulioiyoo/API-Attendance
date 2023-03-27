@@ -195,9 +195,20 @@ exports.updateUser = async (req, res) => {
       return res.status(404).json({ message: "User not found" });
     }
 
+    const user = await User.findOne({ where: { id: userId } });
+    const data = {
+      name: user.dataValues.name,
+      email: user.dataValues.email,
+      password: user.dataValues.password,
+      position: user.dataValues.position,
+      hrd_related: user.dataValues.hrd_related,
+      phone_number: user.dataValues.phone_number,
+      photo_url: user.dataValues.photo_url,
+    };
+
     res.status(201).json({
       message: "success",
-      data: updatedUser,
+      data: data,
     });
   } catch (error) {
     console.error(error);
