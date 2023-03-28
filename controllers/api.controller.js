@@ -87,15 +87,8 @@ exports.createUser = async (req, res) => {
     return res.status(400).json({ message: error.details[0].message });
   }
 
-  const {
-    name,
-    email,
-    password,
-    position,
-    hrd_related,
-    phone_number,
-    photo_url,
-  } = req.body;
+  const { name, email, password, position, hrd_related, phone_number } =
+    req.body;
   const hashedPassword = await bcrypt.hash(password, 10); // melakukan hashing pada password dengan 10 round
 
   // cek apakah ada file gambar yang diupload
