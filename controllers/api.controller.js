@@ -165,8 +165,15 @@ exports.updateUser = async (req, res) => {
   }
 
   const { userId } = req.params;
-  const { name, email, password, position, hrd_related, phone_number } =
-    req.body;
+  const {
+    name,
+    email,
+    password,
+    position,
+    hrd_related,
+    phone_number,
+    photo_url,
+  } = req.body;
 
   let hashedPassword;
   if (password === "" || !password) {
